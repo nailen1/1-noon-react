@@ -1,0 +1,158 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+/* neobrutalism */
+/* https://coolors.co/palette/ef476f-ffd166-06d6a0-118ab2-073b4c */
+
+.container-sideHeader,
+.sticky {
+  background: #ef476f;
+  color: #fff;
+  border: 2px solid #003049;
+  box-shadow: 2px 3px #003049;
+  padding: 2vh 0;
+  margin: 0 2px;
+  /* display: none; */
+}
+
+.container-sideHeader {
+  border-right: 0.5px solid #003049;
+  padding: 2vh 0;
+  box-shadow: 0px 3px #003049;
+  margin: 0;
+
+}
+
+
+.sticky .bx-menu {
+  position: absolute;
+  border: 2px dashed transparent;
+  top: 0;
+  left: 0;
+  padding: 2vh 4vw;
+
+}
+
+.container-sideHeader .bx-arrow-back {
+  position: absolute;
+  border: 2px dashed transparent;
+  top: 0;
+  right: 0;
+  padding: 2vh 4vw;
+}
+
+
+:is(.container-sideHeader, .sticky) h1 {
+  /* margin-bottom: 2vh; */
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.sidemenu {
+  /* border: 1px dashed red; */
+  position: fixed;
+  top: 0;
+  left: -75vw; 
+  width: 75vw;
+  height: 100vh;
+  z-index: 2;
+  background: #FFF;
+  border-right: 0.5px solid #003049;
+  transition: left 0.5s;
+}
+
+.sidemenu.active {
+  left: 0vw;
+}
+
+.sidemenu .side-bg {
+  position: fixed;
+  top: 0;
+  left: 75vw;
+  width: 25vw;
+  height: 100vh;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.sidemenu.active .side-bg {
+opacity: 1;
+}
+
+.side-icons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  padding: 10vw;
+}
+.content-frame {
+  height: 30vh;
+  border: 1px dashed red;
+}
+.side-icons .icon-frame {
+  /* border: 1px dashed red; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+}
+
+.icon-frame i {
+  width: 56px;
+  height: 56px;
+  background: #ef476f;
+  color: #fff;
+  font-size: 42px;
+  line-height: 56px;
+  border-radius: 0px;
+  box-shadow: 2px 3px #003049;
+  margin-bottom: 2px;
+}
+
+.icon-frame p {
+  font-size: 0.8em;
+}
